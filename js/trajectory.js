@@ -44,5 +44,5 @@ function addPath(uri) {
     })
 }
 
-addPath("../data/drive.csv")
+addPath("data/drive.csv")
 
