@@ -5,23 +5,25 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+          integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+          crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+            integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+            crossorigin=""></script>
+    <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+    <script src="dist/plugins/dashflow/L.Path.DashFlow.js"></script>
+    <link rel="stylesheet" href="dist/plugins/condensed-attributes/leaflet-control-condended-attribution.css" />
+    <script type="text/javascript" src="dist/plugins/condensed-attributes/leaflet-control-condended-attribution.js"></script>
 
-    <!-- CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-
-<div id="choropleth_map"></div>
-
-<script type="text/javascript">
-
-    var spec2 = "js/map.vg.json";
-    vegaEmbed('#choropleth_map', spec2).then(function (result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-</script>
-
+<div id="map"></div>
 </body>
+<script src="js/trajectory.js" defer></script>
 </html>
+
