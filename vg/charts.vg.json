@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/drive.csv"
+  },
+  "vconcat": [
+    {
+      "title": "HDOP vs Error",
+      "mark": {
+        "type": "line",
+        "tooltip": true
+      },
+      "height": 200,
+      "width": 300,
+      "encoding": {
+        "x": {
+          "title": "HDOP",
+          "field": "HDOP",
+          "scale": {
+            "zero": false
+          },
+          "type": "quantitative"
+        },
+        "y": {
+          "title": "Horizontal Error",
+          "field": "EHPE \\[m\\]",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 250,
+  "height": 250,
+  "title": "Directional Movements",
+  "data": [
+    {
+      "async": true,
+      "name": "source",
+      "url": "data/drive.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum['SOG \\[m/s\\]'] != null && datum['COG \\[deg\\]'] != null"
+        },
+        {
+          "type": "formula",
+          "expr": "datum['SOG \\[m/s\\]'] * cos(PI * datum['COG \\[deg\\]'] / 180)",
+          "as": "posX"
+        },
+        {
+          "type": "formula",
+          "expr": "datum['SOG \\[m/s\\]'] * sin(PI * datum['COG \\[deg\\]'] / 180)",
+          "as": "posY"
+        }
+      ]
+    },
+    {
+      "name": "density",
+      "source": "source",
+      "transform": [
+        {
+          "type": "kde2d",
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "x": {
+            "expr": "scale('x', datum.posX)"
+          },
+          "y": {
+            "expr": "scale('y', datum.posY)"
+          },
+          "bandwidth": [
+            -1,
+            -1
+          ],
+          "cellSize": 4,
+          "counts": false
+        },
+        {
+          "type": "heatmap",
+          "field": "grid",
+          "resolve": "independent",
+          "color": {
+            "expr": "scale('density', datum.$value / datum.$max)"
+          },
+          "opacity": 1
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "round": true,
+      "nice": true,
+      "zero": true,
+      "domain": {
+        "data": "source",
+        "field": "posX"
+      },
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "round": true,
+      "nice": true,
+      "zero": true,
+      "domain": {
+        "data": "source",
+        "field": "posY"
+      },
+      "range": "height"
+    },
+    {
+      "name": "density",
+      "type": "linear",
+      "zero": true,
+      "domain": [
+        0,
+        1
+      ],
+      "range": {
+        "scheme": "viridis"
+      }
+    }
+  ],
+  "axes": [
+    {
+      "scale": "y",
+      "domain": false,
+      "orient": "left",
+      "titlePadding": 5,
+      "offset": 2,
+      "title": "North"
+    }
+  ],
+  "legends": [
+    {
+      "fill": "density",
+      "gradientLength": {
+        "signal": "height - 28"
+      }
+    }
+  ],
+  "layout": {
+    "bounds": "flush",
+    "columns": 3,
+    "padding": 10
+  },
+  "marks": [
+    {
+      "type": "group",
+      "encode": {
+        "update": {
+          "width": {
+            "signal": "width"
+          },
+          "height": {
+            "signal": "height"
+          }
+        }
+      },
+      "axes": [
+        {
+          "scale": "x",
+          "domain": false,
+          "orient": "bottom",
+          "tickCount": 5,
+          "labelFlush": true,
+          "title": "East"
+        }
+      ],
+      "marks": [
+        {
+          "type": "image",
+          "from": {
+            "data": "density"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "value": 0
+              },
+              "y": {
+                "value": 0
+              },
+              "image": {
+                "field": "image"
+              },
+              "width": {
+                "signal": "width"
+              },
+              "height": {
+                "signal": "height"
+              },
+              "smooth": {
+                "value": true
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

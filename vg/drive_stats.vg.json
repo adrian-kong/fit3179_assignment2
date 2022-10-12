@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "../data/drive.csv"
+  },
+  "repeat": {
+    "row": [
+      "Horiz Vel \\[m/s\\]",
+      "2D Delta Pos \\[m\\]",
+      "Alt Ellips \\[m\\]",
+      "Corr\\. Age \\[s\\]",
+      "Baseline 3D \\[m\\]"
+    ]
+  },
+  "spec": {
+    "height": 100,
+    "width": 500,
+    "layer": [
+      {
+        "params": [
+          {
+            "name": "brush",
+            "select": {
+              "type": "interval",
+              "encodings": [
+                "x"
+              ]
+            }
+          }
+        ],
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "scale": {
+              "zero": false
+            },
+            "title": "GPS TOW [seconds]",
+            "field": "GPS TOW \\[s\\]",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": {
+              "repeat": "row"
+            },
+            "type": "quantitative"
+          },
+          "color": {"value": "#ddd"}
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": {
+              "param": "brush"
+            }
+          }
+        ],
+        "mark": "line",
+        "encoding": {
+          "x": {
+            "scale": {
+              "zero": false
+            },
+            "title": "GPS TOW [seconds]",
+            "field": "GPS TOW \\[s\\]",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": {
+              "repeat": "row"
+            },
+            "type": "quantitative"
+          }
+        }
+      }
+    ]
+  }
+}
