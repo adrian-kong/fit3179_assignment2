@@ -29,7 +29,15 @@ body {
 }
 
 .text1 {
+    width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text1 p {
     margin: 128px 64px 108px 64px;
+    text-align: center;
+
 }
 
 .text1 h1 {
@@ -38,8 +46,17 @@ body {
 }
 
 .section2 {
+    width: 1920px;
     display: flex;
-    margin-left: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.section2content {
+    margin-left: 120px;
 }
 
 #cdfs {
@@ -53,7 +70,8 @@ body {
 .text2 h1 {
     font-size: 48px;
 }
-.text2 p{
+
+.text2 p {
     font-size: 20px;
 }
 
