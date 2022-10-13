@@ -1,19 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "../data/drive.csv"
+    "url": "data/drive.csv"
   },
   "repeat": {
     "row": [
+      "Alt Ellips \\[m\\]",
       "Horiz Vel \\[m/s\\]",
       "2D Delta Pos \\[m\\]",
-      "Alt Ellips \\[m\\]",
-      "Corr\\. Age \\[s\\]",
-      "Baseline 3D \\[m\\]"
+      "Corr\\. Age \\[s\\]"
     ]
   },
   "spec": {
-    "height": 100,
+    "height": 150,
     "width": 500,
     "layer": [
       {

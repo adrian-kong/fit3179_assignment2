@@ -1,6 +1,61 @@
+body {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#header {
+    font-size: 64px;
+    font-weight: bold;
+    padding-top: 48px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.divider {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+#title {
+    padding-left: 24px;
+    padding-top: 24px;
+}
+
+#header h1{
+    font-size: 72px;
+    line-height: 0;
+}
+
+#header p {
+    font-weight: lighter;
+    font-size: 36px;
+    padding-top: 12px;
+    line-height: 0;
+    text-align: left;
+}
+
 #map {
     height: 800px;
     width: 1200px;
+    border-radius: 16px;
+}
+
+#drive{
+    left: 36px;
+}
+
+#header span {
+    padding-left: 24px;
+    padding-top: 20px;
+}
+
+.section1 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .leaflet-popup-content-wrapper {

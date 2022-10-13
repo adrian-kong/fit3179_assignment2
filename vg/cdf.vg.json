@@ -7,7 +7,7 @@
     {
       "async": true,
       "name": "points",
-      "url": "../data/drive.csv",
+      "url": "data/drive.csv",
       "format": {
         "type": "csv"
       }

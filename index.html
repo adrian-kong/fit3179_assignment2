@@ -17,19 +17,37 @@
     <link rel="stylesheet" href="dist/plugins/condensed-attributes/leaflet-control-condended-attribution.css"/>
     <script type="text/javascript"
             src="dist/plugins/condensed-attributes/leaflet-control-condended-attribution.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-<div id="map"></div>
-<div id="drive"></div>
-<br>
-<div id="cdf"></div>
-<div id="charts"></div>
-<br>
-<div id="density"></div>
+<div id="">
+    <div id="header">
+        <img id="swiftnav" src="icons/icon_128x128.png">
+        <div id="title">
+            <h1>Navigation Sensor Data</h1>
+            <p>A visualization of precise positioning data</p>
+
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section1">
+        <div id="map"></div>
+        <div id="drive"></div>
+    </div>
+    <br>
+    <div id="cdf"></div>
+    <div id="charts"></div>
+    <br>
+    <div id="density"></div>
+    <div id="logs"></div>
+</div>
 </body>
 <script src="js/trajectory.js" defer></script>
 </html>

@@ -1,4 +1,4 @@
-const layerURL = "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png" // dont steal my free acc
+const layerURL = "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=ba52a661-85af-472c-a071-bb62fa316c3f"
 
 const attribution = {
     prefix: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
@@ -138,4 +138,5 @@ vegaEmbed('#drive', "vg/drive_stats.vg.json", {
 vegaEmbed('#cdf', "vg/cdf.vg.json").then().catch(console.error);
 vegaEmbed('#charts', "vg/charts.vg.json").then().catch(console.error);
 vegaEmbed('#density', "vg/movement_density.vg.json").then().catch(console.error);
+// vegaEmbed('#logs', "vg/logs.vg.json").then().catch(console.error);
 
