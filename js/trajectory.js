@@ -20,7 +20,7 @@ const color = ["#000", "#00B300", "#53b400", "#79b400", "#99b300", "#b5b100", "#
 let legend = L.control({position: 'topright'});
 legend.onAdd = () => {
     const div = L.DomUtil.create('div', 'pmodes'),
-        labels = ['<strong style="font-size: 18px">GNSS Modes</strong>', ''],
+        labels = ['<strong style="font-size: 16px; line-height: 36px">GNSS Modes</strong>'],
         categories = ['None', 'Single Point', 'Differential GNSS', 'Floated RTK', 'Fixed RTK', 'Dead Reckoning'
             , 'SBAS', 'Manual', 'Simulator', 'Unknown'];
 
@@ -114,6 +114,8 @@ const DRIVE_PATH = "data/drive.csv";
 
 addPath(DRIVE_PATH)
 
+const CUSTOM_TOW_EVENT = "brushEvent";
+
 vegaEmbed('#drive', "vg/drive_stats.vg.json", {
     patch: (spec) => {
         spec.signals.push({
@@ -126,6 +128,7 @@ vegaEmbed('#drive', "vg/drive_stats.vg.json", {
 }).then(result => {
     result.view.addSignalListener('barClick', () => {
         const tow = result.view.data('brush_store');
+        document.dispatchEvent(new CustomEvent(CUSTOM_TOW_EVENT, {detail: tow}));
         try {
             const range = tow[0].values[0]
             addPath(DRIVE_PATH, range[0], range[1])
@@ -135,8 +138,23 @@ vegaEmbed('#drive', "vg/drive_stats.vg.json", {
         }
     })
 }).catch(console.error);
-vegaEmbed('#cdf', "vg/cdf.vg.json").then().catch(console.error);
-vegaEmbed('#charts', "vg/charts.vg.json").then().catch(console.error);
-vegaEmbed('#density', "vg/movement_density.vg.json").then().catch(console.error);
-// vegaEmbed('#logs', "vg/logs.vg.json").then().catch(console.error);
 
+
+const hookBrushEvent = (vl) => {
+    document.addEventListener(CUSTOM_TOW_EVENT, (e) => {
+        try {
+            vl.view.signal("start_tow", e.detail[0].values[0][0])
+            vl.view.signal("end_tow", e.detail[0].values[0][1]).runAsync()
+        } catch (e) {
+            console.log("unable to find range... reverting to unbounded")
+            vl.view.signal("start_tow", null);
+            vl.view.signal("end_tow", null).runAsync();
+        }
+    })
+}
+
+vegaEmbed('#cdf_2d', "vg/2d_cdf.vg.json").then(hookBrushEvent).catch(console.error);
+vegaEmbed('#cdf_3d', "vg/3d_cdf.vg.json").then(hookBrushEvent).catch(console.error);
+// vegaEmbed('#charts', "vg/charts.vg.json").then().catch(console.error);
+vegaEmbed('#density', "vg/movement_density.vg.json").then(hookBrushEvent).catch(console.error);
+// vegaEmbed('#logs', "vg/logs.vg.json").then().catch(console.error);

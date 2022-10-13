@@ -7,12 +7,18 @@
     "row": [
       "Alt Ellips \\[m\\]",
       "Horiz Vel \\[m/s\\]",
-      "2D Delta Pos \\[m\\]",
+      "SVs Used",
       "Corr\\. Age \\[s\\]"
     ]
   },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "background": null
+  },
   "spec": {
-    "height": 150,
+    "height": 140,
     "width": 500,
     "layer": [
       {
@@ -27,13 +33,16 @@
             }
           }
         ],
-        "mark": "line",
+        "mark": {
+          "type": "line",
+          "tooltip": true
+        },
         "encoding": {
           "x": {
             "scale": {
               "zero": false
             },
-            "title": "GPS TOW [seconds]",
+            "title": "GPS Time of week [seconds]",
             "field": "GPS TOW \\[s\\]",
             "type": "quantitative"
           },
@@ -60,15 +69,21 @@
             "scale": {
               "zero": false
             },
-            "title": "GPS TOW [seconds]",
+            "title": "GPS Time of week [seconds]",
             "field": "GPS TOW \\[s\\]",
-            "type": "quantitative"
+            "type": "quantitative",
+            "axis": {
+              "grid": false
+            }
           },
           "y": {
             "field": {
               "repeat": "row"
             },
-            "type": "quantitative"
+            "type": "quantitative",
+            "axis": {
+              "grid": false
+            }
           }
         }
       }

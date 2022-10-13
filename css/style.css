@@ -6,7 +6,6 @@ body {
 #header {
     font-size: 64px;
     font-weight: bold;
-    padding-top: 48px;
     display: flex;
     align-items: center;
     align-content: center;
@@ -14,8 +13,9 @@ body {
 }
 
 .divider {
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 28px;
+    margin-bottom: 64px;
+    width: 1920px;
 }
 
 #title {
@@ -23,9 +23,42 @@ body {
     padding-top: 24px;
 }
 
-#header h1{
+#header h1 {
     font-size: 72px;
     line-height: 0;
+}
+
+.text1 {
+    margin: 128px 64px 108px 64px;
+}
+
+.text1 h1 {
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.section2 {
+    display: flex;
+    margin-left: 240px;
+}
+
+#cdfs {
+    margin-top: 48px;
+}
+
+.text2 {
+    margin: 20px 240px 20px 120px;
+}
+
+.text2 h1 {
+    font-size: 48px;
+}
+.text2 p{
+    font-size: 20px;
+}
+
+#content {
+    margin: 64px;
 }
 
 #header p {
@@ -40,10 +73,11 @@ body {
     height: 800px;
     width: 1200px;
     border-radius: 16px;
+    box-shadow: rgb(0 0 0 / 56%) 0 22px 70px 4px
 }
 
-#drive{
-    left: 36px;
+#drive {
+    margin-left: 72px;
 }
 
 #header span {
@@ -59,10 +93,12 @@ body {
 }
 
 .leaflet-popup-content-wrapper {
-    background:#0e0e0e;
-    color:#fff;
-    font-size:18px;
+    background: #1f1f1f;
+    color: #fff;
+    font-size: 14px;
     text-align: center;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .circle {
@@ -72,10 +108,26 @@ body {
     text-align: center;
     white-space: nowrap;
 }
+
 .pmodes {
     color: #fff;
     font-size: 12px;
-    background-color: #0e0e0e;
+    font-family: sans-serif;
+    background-color: #1f1f1f;
     border-radius: 10px;
-    padding: 15px;
+    padding: 12px 24px 16px 24px;
+    text-align: left;
+    opacity: 0.3;
+    transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
+}
+
+.pmodes:hover {
+    opacity: 1;
+    transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -webkit-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
 }

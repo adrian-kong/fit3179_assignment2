@@ -1,8 +1,18 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 250,
-  "height": 250,
-  "title": "Directional Movements",
+  "width": 600,
+  "height": 600,
+  "title": "Speed and Direction of Motion",
+  "signals": [
+    {
+      "name": "start_tow",
+      "value": null
+    },
+    {
+      "name": "end_tow",
+      "value": null
+    }
+  ],
   "data": [
     {
       "async": true,
@@ -12,6 +22,10 @@
         "type": "csv"
       },
       "transform": [
+        {
+          "type": "filter",
+          "expr": "(start_tow == null || datum['GPS TOW \\[s\\]'] >= start_tow) && (end_tow == null || datum['GPS TOW \\[s\\]'] <= end_tow)"
+        },
         {
           "type": "filter",
           "expr": "datum['SOG \\[m/s\\]'] != null && datum['COG \\[deg\\]'] != null"

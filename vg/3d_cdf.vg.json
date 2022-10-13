@@ -1,0 +1,144 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 300,
+  "height": 200,
+  "title": "Cumulative 3D Error [m]",
+  "signals": [
+    {
+      "name": "start_tow",
+      "value": null
+    },
+    {
+      "name": "end_tow",
+      "value": null
+    }
+  ],
+  "data": [
+    {
+      "async": true,
+      "name": "points",
+      "url": "data/drive.csv",
+      "format": {
+        "type": "csv"
+      },
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(start_tow == null || datum['GPS TOW \\[s\\]'] >= start_tow) && (end_tow == null || datum['GPS TOW \\[s\\]'] <= end_tow)"
+        },
+        {
+          "type": "formula",
+          "expr": "sqrt(pow(datum['EHPE \\[m\\]'],2) + pow(datum['EVPE \\[m\\]'], 2))",
+          "as": "3d_error"
+        }
+      ]
+    },
+    {
+      "name": "density",
+      "source": "points",
+      "transform": [
+        {
+          "type": "density",
+          "extent": {
+            "signal": "domain('xscale')"
+          },
+          "method": "cdf",
+          "distribution": {
+            "function": "kde",
+            "field": "3d_error",
+            "bandwidth": 0
+          }
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "xscale",
+      "type": "linear",
+      "range": "width",
+      "domain": {
+        "data": "points",
+        "field": "3d_error"
+      },
+      "nice": true
+    },
+    {
+      "name": "yscale",
+      "type": "linear",
+      "range": "height",
+      "round": true,
+      "domain": {
+        "fields": [
+          {
+            "data": "density",
+            "field": "density"
+          }
+        ]
+      }
+    }
+  ],
+  "axes": [
+    {
+      "orient": "bottom",
+      "scale": "xscale",
+      "zindex": 1
+    }
+  ],
+  "marks": [
+    {
+      "type": "line",
+      "from": {
+        "data": "density"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "xscale",
+            "field": "value"
+          },
+          "y": {
+            "scale": "yscale",
+            "field": "density"
+          },
+          "y2": {
+            "scale": "yscale",
+            "value": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "points"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "scale": "xscale",
+            "field": "3d_error"
+          },
+          "width": {
+            "value": 1
+          },
+          "y": {
+            "value": 25,
+            "offset": {
+              "signal": "height"
+            }
+          },
+          "height": {
+            "value": 5
+          },
+          "fill": {
+            "value": "steelblue"
+          },
+          "fillOpacity": {
+            "value": 0.4
+          }
+        }
+      }
+    }
+  ]
+}
