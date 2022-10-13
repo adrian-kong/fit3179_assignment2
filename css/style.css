@@ -94,8 +94,12 @@ body {
     box-shadow: rgb(0 0 0 / 56%) 0 22px 70px 4px
 }
 
-#drive {
+#tow {
     margin-left: 72px;
+}
+#interact_msg {
+    font-size: 14px;
+    padding-top: 24px;
 }
 
 #header span {
