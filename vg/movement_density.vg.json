@@ -133,7 +133,7 @@
     {
       "fill": "density",
       "gradientLength": {
-        "signal": "height - 28"
+        "signal": "height"
       }
     }
   ],

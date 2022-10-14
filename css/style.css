@@ -13,9 +13,12 @@ body {
 }
 
 .divider {
-    margin-top: 28px;
-    margin-bottom: 64px;
-    width: 1920px;
+    margin-top: -12px;
+    margin-bottom: 84px;
+    border: none;
+    width: 70%;
+    height: 50px;
+    box-shadow: 0 10px 20px -20px #1f1f1f;
 }
 
 #title {
@@ -53,10 +56,13 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 56%) 0 22px 70px 4px
 }
 
 .section2content {
     margin-left: 120px;
+    padding: 100px;
 }
 
 #cdfs {
@@ -88,14 +94,20 @@ body {
 }
 
 #map {
-    height: 800px;
+    height: 1000px;
     width: 1200px;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: rgb(0 0 0 / 56%) 0 22px 70px 4px
 }
 
+#drivecont {
+    margin-left: 64px;
+    box-shadow: rgb(0 0 0 / 56%) 0 22px 70px 4px;
+    border-radius: 12px;
+}
+
 #drive {
-    margin-left: 72px;
+    padding: 56px 72px 56px 48px;
 }
 
 #header span {
