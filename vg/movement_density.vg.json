@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 600,
   "height": 600,
-  "title": "Speed and Direction of Motion",
   "signals": [
     {
       "name": "start_tow",
@@ -126,7 +125,9 @@
       "orient": "left",
       "titlePadding": 5,
       "offset": 2,
-      "title": "North"
+      "labelFontSize": 14,
+      "titleFontSize": 20,
+      "title": "North (m)"
     }
   ],
   "legends": [
@@ -162,7 +163,9 @@
           "orient": "bottom",
           "tickCount": 5,
           "labelFlush": true,
-          "title": "East"
+          "labelFontSize": 14,
+          "titleFontSize": 20,
+          "title": "East (m)"
         }
       ],
       "marks": [

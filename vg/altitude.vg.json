@@ -1,0 +1,137 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/drive.csv"
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    },
+    "background": null
+  },
+  "height": 200,
+  "width": 500,
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "brush",
+          "select": {
+            "type": "interval",
+            "encodings": [
+              "x"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "tooltip": true,
+        "line": {
+          "color": "#ddd"
+        },
+        "color": "#ddd"
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "title": "GPS Time (seconds)",
+            "field": "GPS TOW \\[s\\]",
+            "type": "quantitative"
+          },
+          {
+            "title": "Height (m)",
+            "field": "Alt Ellips \\[m\\]",
+            "type": "quantitative"
+          }
+        ],
+        "x": {
+          "scale": {
+            "zero": false
+          },
+          "title": "GPS Time (seconds)",
+          "field": "GPS TOW \\[s\\]",
+          "type": "quantitative",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "grid": false,
+            "domain": false
+          }
+        },
+        "y": {
+          "title": "Height (m)",
+          "field": "Alt Ellips \\[m\\]",
+          "type": "quantitative",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "grid": false,
+            "domain": false,
+            "ticks": false
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": {
+            "param": "brush"
+          }
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "line": {
+          "color": "black"
+        },
+        "color": {
+          "x1": 1,
+          "y1": 1,
+          "x2": 1,
+          "y2": 0,
+          "gradient": "linear",
+          "stops": [
+            {
+              "offset": 0,
+              "color": "white"
+            },
+            {
+              "offset": 1,
+              "color": "black"
+            }
+          ]
+        }
+      },
+      "encoding": {
+        "x": {
+          "scale": {
+            "zero": false
+          },
+          "title": "GPS Time (seconds)",
+          "field": "GPS TOW \\[s\\]",
+          "type": "quantitative",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "grid": false,
+            "domain": false
+          }
+        },
+        "y": {
+          "title": "Height (m)",
+          "field": "Alt Ellips \\[m\\]",
+          "type": "quantitative",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 16,
+            "grid": false,
+            "domain": false,
+            "ticks": false
+          }
+        }
+      }
+    }
+  ]
+}

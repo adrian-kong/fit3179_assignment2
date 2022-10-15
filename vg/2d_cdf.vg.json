@@ -1,8 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 300,
+  "width": 500,
   "height": 200,
-  "title": "Cumulative 2D Error [m]",
+  "title": {
+    "fontSize": 20,
+    "text": "Latitude, Longitude 2D Error"
+  },
   "signals": [
     {
       "name": "start_tow",
@@ -77,7 +80,8 @@
     {
       "orient": "bottom",
       "scale": "xscale",
-      "zindex": 1
+      "zindex": 1,
+      "labelFontSize": 16
     }
   ],
   "marks": [

@@ -1,0 +1,400 @@
+,Output new client connection
+,Output_client0: dropping data
+,Velocity suppressed due to velocity confidence of 333333.3 exceeding 5 m/s
+411899,"ObservationCombiner -- starting new sequence, old sequence interrupted."
+411901.5,BDS B1 26 Ephemeris with key 21690 differs from previously received
+411901.5,BDS B1 14 Ephemeris with key 21690 differs from previously received
+411901.5,BDS B1 24 Ephemeris with key 21690 differs from previously received
+411901.5,BDS B1 21 Ephemeris with key 21690 differs from previously received
+411901.5,BDS B1 14 Ephemeris with key 21690 differs from previously received
+411901.5,BDS B1 21 Ephemeris with key 21690 differs from previously received
+411901.5,BDS B1 24 Ephemeris with key 21690 differs from previously received
+411901.5,BDS B1 26 Ephemeris with key 21690 differs from previously received
+411931.5,BDS B1 25 Ephemeris with key 21690 differs from previously received
+411931.5,BDS B1 8 Ephemeris with key 21690 differs from previously received
+411931.5,BDS B1 8 Ephemeris with key 21690 differs from previously received
+411931.5,BDS B1 25 Ephemeris with key 21690 differs from previously received
+411934,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+411934,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+412220.4,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412220.4,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412220.4,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412220.4,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412220.4,BDS B1 25 Ephemeris with key 21690 differs from previously received
+412220.4,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412220.7,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+412221,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+412221,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412221,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412221,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412221,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412221,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412232.1,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412232.1,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412232.1,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412232.3,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412232.3,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412232.3,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412234,BDS B1 25 Ephemeris with key 21690 differs from previously received
+412292.1,BDS B1 25 Ephemeris with key 21690 differs from previously received
+412292.1,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412292.3,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412292.3,BDS B1 25 Ephemeris with key 21690 differs from previously received
+412301.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+412302,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+412442.1,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412442.3,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412447.3,(robust_estimator.cc:526) maximum outlier count of 1 exceeded
+412451,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412452,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412453,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412454,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412455,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412456,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412457,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412458,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412459,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412460,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412461,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412462,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412463,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412464,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412465,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412466,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412467,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412468,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412469,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412470,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412471,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412472,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412473,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412474,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412475,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412476.1,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412477,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412478,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412479,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412480,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412481,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412482,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412483,(robust_estimator.cc:414) MDE failure: possible position error too large.
+412484,(robust_estimator.cc:526) maximum outlier count of 1 exceeded
+412484,(filter.cc:499) Filter reset because outlier detection failed repeatedly
+412484.3,Velocity suppressed due to update delta time of 37.48 s exceeding allowable update delta time of 1.00 s
+412820.3,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412820.3,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412820.3,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412820.3,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412820.4,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412820.4,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412820.4,BDS B1 25 Ephemeris with key 21690 differs from previously received
+412820.4,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412820.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+412821,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+412821,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412821,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412821,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412832,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412832,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412832.1,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412832.3,BDS B1 14 Ephemeris with key 21690 differs from previously received
+412832.3,BDS B1 21 Ephemeris with key 21690 differs from previously received
+412832.3,BDS B1 26 Ephemeris with key 21690 differs from previously received
+412856,BDS B1 25 Ephemeris with key 21690 differs from previously received
+412862.1,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412862.3,BDS B1 8 Ephemeris with key 21690 differs from previously received
+412922.1,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412922.3,BDS B1 24 Ephemeris with key 21690 differs from previously received
+412982.1,BDS B1 25 Ephemeris with key 21690 differs from previously received
+412982.3,BDS B1 25 Ephemeris with key 21690 differs from previously received
+413420.3,BDS B1 14 Ephemeris with key 21690 differs from previously received
+413420.3,BDS B1 14 Ephemeris with key 21690 differs from previously received
+413420.4,BDS B1 8 Ephemeris with key 21690 differs from previously received
+413420.4,BDS B1 21 Ephemeris with key 21690 differs from previously received
+413420.4,BDS B1 24 Ephemeris with key 21690 differs from previously received
+413420.4,BDS B1 25 Ephemeris with key 21690 differs from previously received
+413420.4,BDS B1 26 Ephemeris with key 21690 differs from previously received
+413421,BDS B1 8 Ephemeris with key 21690 differs from previously received
+413421,BDS B1 24 Ephemeris with key 21690 differs from previously received
+413421,BDS B1 26 Ephemeris with key 21690 differs from previously received
+413430.3,BDS B1 21 Ephemeris with key 21690 differs from previously received
+413432,BDS B1 14 Ephemeris with key 21690 differs from previously received
+413432.3,BDS B1 14 Ephemeris with key 21690 differs from previously received
+413436.3,BDS B1 25 Ephemeris with key 21690 differs from previously received
+413522,BDS B1 26 Ephemeris with key 21690 differs from previously received
+413522,BDS B1 24 Ephemeris with key 21690 differs from previously received
+413522.3,BDS B1 24 Ephemeris with key 21690 differs from previously received
+413522.3,BDS B1 26 Ephemeris with key 21690 differs from previously received
+413942.1,BDS B1 21 Ephemeris with key 21690 differs from previously received
+413942.3,BDS B1 21 Ephemeris with key 21690 differs from previously received
+413975.8,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+413976,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414020.8,BDS B1 14 Ephemeris with key 21690 differs from previously received
+414020.8,BDS B1 21 Ephemeris with key 21690 differs from previously received
+414020.8,BDS B1 24 Ephemeris with key 21690 differs from previously received
+414020.8,BDS B1 26 Ephemeris with key 21690 differs from previously received
+414021,BDS B1 14 Ephemeris with key 21690 differs from previously received
+414021,BDS B1 24 Ephemeris with key 21690 differs from previously received
+414021,BDS B1 26 Ephemeris with key 21690 differs from previously received
+414022.6,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414023,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414042.7,"(base_position_handler.cc:180) Epoch: 414042.00, changed surveyed base station position by 10567.142m."
+414042.7,"(base_position_handler.cc:180) Epoch: 414042.00, changed surveyed base station position by 10567.142m."
+414043.7,"(base_position_handler.cc:180) Epoch: 414043.00, changed surveyed base station position by 10567.142m."
+414062.1,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414062.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414199,"New obs time {wn = 2142, tow = 414199.003000} and last update time {wn = 2142, tow = 414078.503000} difference exceeds threshold of 120 seconds, reinitializing filter"
+414299.4,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414300,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414300.5,"ObservationCombiner -- starting new sequence, old sequence interrupted."
+414300.5,"New obs time {wn = 2142, tow = 414300.004000} and last update time {wn = 2142, tow = 414049.002000} difference exceeds threshold of 120 seconds, reinitializing filter"
+414300.5,"(base_position_handler.cc:180) Epoch: 414300.00, changed surveyed base station position by 3029.160m."
+414300.5,"New obs time {wn = 2142, tow = 414300.004000} and last update time {wn = 2142, tow = 414049.002000} difference exceeds threshold of 120 seconds, reinitializing ambiguity manager"
+414300.5,"(base_position_handler.cc:180) Epoch: 414300.00, changed surveyed base station position by 3029.160m."
+414301.5,"(base_position_handler.cc:180) Epoch: 414301.00, changed surveyed base station position by 3029.160m."
+414332.1,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414332.1,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414332.1,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414332.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414332.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414332.3,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414337,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414337.3,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414587.9,GPS L1CA 9 Ephemeris with key 68 differs from previously received
+414588,GPS L1CA 9 Ephemeris with key 68 differs from previously received
+414588.5,(robust_estimator.cc:526) maximum outlier count of 1 exceeded
+414590.3,(robust_estimator.cc:526) maximum outlier count of 2 exceeded
+414591.6,(robust_estimator.cc:526) maximum outlier count of 2 exceeded
+414592.5,(robust_estimator.cc:526) maximum outlier count of 2 exceeded
+414592.5,(filter.cc:499) Filter reset because outlier detection failed repeatedly
+414620.4,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414620.4,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414620.4,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414620.7,GPS L1CA 9 Ephemeris with key 68 differs from previously received
+414620.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414621,GPS L1CA 9 Ephemeris with key 68 differs from previously received
+414621,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414621,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414621,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414621,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414722.1,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414722.1,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414722.1,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414722.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414722.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414722.3,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414752.1,BDS B1 25 Ephemeris with key 22895 differs from previously received
+414752.3,BDS B1 25 Ephemeris with key 22895 differs from previously received
+414755.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414756,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414792.4,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414792.5,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414792.5,BDS B1 25 Ephemeris with key 22895 differs from previously received
+414792.5,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414792.5,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414793,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414793,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414793,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414793,BDS B1 25 Ephemeris with key 22895 differs from previously received
+414793,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414794.6,"New obs time {wn = 2142, tow = 414791.006000} and last update time {wn = 2142, tow = 414670.006000} difference exceeds threshold of 120 seconds, reinitializing filter"
+414794.6,"(base_position_handler.cc:180) Epoch: 414791.00, changed surveyed base station position by 2442.789m."
+414794.7,"New obs time {wn = 2142, tow = 414791.006000} and last update time {wn = 2142, tow = 414670.006000} difference exceeds threshold of 120 seconds, reinitializing ambiguity manager"
+414794.7,"(base_position_handler.cc:180) Epoch: 414791.00, changed surveyed base station position by 2442.789m."
+414795.6,"(base_position_handler.cc:180) Epoch: 414792.01, changed surveyed base station position by 2442.789m."
+414812.1,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414812.1,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414812.1,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414812.1,BDS B1 25 Ephemeris with key 22895 differs from previously received
+414812.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+414812.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+414812.3,BDS B1 25 Ephemeris with key 22895 differs from previously received
+414812.3,BDS B1 26 Ephemeris with key 22895 differs from previously received
+414845.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+414846,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+415220.5,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415220.6,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415220.6,BDS B1 25 Ephemeris with key 22895 differs from previously received
+415220.6,BDS B1 26 Ephemeris with key 22895 differs from previously received
+415221,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415221,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415221,BDS B1 25 Ephemeris with key 22895 differs from previously received
+415221,BDS B1 26 Ephemeris with key 22895 differs from previously received
+415221.2,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+415221.3,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+415232.1,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415232.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415375.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415376,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415412,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415412.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415465.3,"New obs time {wn = 2142, tow = 415465.510000} and last update time {wn = 2142, tow = 415345.509000} difference exceeds threshold of 120 seconds, reinitializing filter"
+415526.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415526.9,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415526.9,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415527,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415527,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415527,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415527.9,"ObservationCombiner -- starting new sequence, old sequence interrupted."
+415527.9,"New obs time {wn = 2142, tow = 415527.010000} and last update time {wn = 2142, tow = 415316.009000} difference exceeds threshold of 120 seconds, reinitializing filter"
+415527.9,"(base_position_handler.cc:180) Epoch: 415527.00, changed surveyed base station position by 2160.224m."
+415527.9,"New obs time {wn = 2142, tow = 415527.010000} and last update time {wn = 2142, tow = 415316.009000} difference exceeds threshold of 120 seconds, reinitializing ambiguity manager"
+415527.9,"(base_position_handler.cc:180) Epoch: 415527.00, changed surveyed base station position by 2160.224m."
+415528.9,"(base_position_handler.cc:180) Epoch: 415528.01, changed surveyed base station position by 2160.224m."
+415535.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415536,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415637.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+415638,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+415652,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415652,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415652,BDS B1 26 Ephemeris with key 22895 differs from previously received
+415652.1,BDS B1 25 Ephemeris with key 22895 differs from previously received
+415652.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415652.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415652.3,BDS B1 25 Ephemeris with key 22895 differs from previously received
+415652.3,BDS B1 26 Ephemeris with key 22895 differs from previously received
+415681.3,(robust_estimator.cc:526) maximum outlier count of 3 exceeded
+415682.3,(robust_estimator.cc:526) maximum outlier count of 3 exceeded
+415682.3,(filter.cc:499) Filter reset because outlier detection failed repeatedly
+415683,Velocity suppressed due to update delta time of 1.98 s exceeding allowable update delta time of 1.00 s
+415684.3,(robust_estimator.cc:526) maximum outlier count of 5 exceeded
+415685.3,(robust_estimator.cc:526) maximum outlier count of 4 exceeded
+415685.3,(filter.cc:499) Filter reset because outlier detection failed repeatedly
+415686.1,Velocity suppressed due to update delta time of 2.02 s exceeding allowable update delta time of 1.00 s
+415825.2,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415825.3,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415825.6,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415825.7,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415825.7,BDS B1 25 Ephemeris with key 22895 differs from previously received
+415825.7,BDS B1 26 Ephemeris with key 22895 differs from previously received
+415825.7,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+415826,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+415826,BDS B1 14 Ephemeris with key 22895 differs from previously received
+415826,BDS B1 24 Ephemeris with key 22895 differs from previously received
+415826,BDS B1 25 Ephemeris with key 22895 differs from previously received
+415826,BDS B1 26 Ephemeris with key 22895 differs from previously received
+415827.4,"(base_position_handler.cc:180) Epoch: 415826.00, changed surveyed base station position by 2228.306m."
+415827.4,"(base_position_handler.cc:180) Epoch: 415826.00, changed surveyed base station position by 2228.306m."
+415828.1,"(base_position_handler.cc:180) Epoch: 415827.01, changed surveyed base station position by 2228.306m."
+415836.4,(robust_estimator.cc:526) maximum outlier count of 2 exceeded
+415837.3,(robust_estimator.cc:526) maximum outlier count of 2 exceeded
+415837.3,(filter.cc:499) Filter reset because outlier detection failed repeatedly
+415838.1,Velocity suppressed due to update delta time of 1.98 s exceeding allowable update delta time of 1.00 s
+415857.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+415858,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416132.1,BDS B1 24 Ephemeris with key 22895 differs from previously received
+416132.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+416222.1,BDS B1 14 Ephemeris with key 22895 differs from previously received
+416222.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+416237.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+416238,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+416252.1,BDS B1 26 Ephemeris with key 22895 differs from previously received
+416252.1,BDS B1 8 Ephemeris with key 22895 differs from previously received
+416252.3,BDS B1 8 Ephemeris with key 22895 differs from previously received
+416252.3,BDS B1 26 Ephemeris with key 22895 differs from previously received
+416282.1,BDS B1 25 Ephemeris with key 22895 differs from previously received
+416282.3,BDS B1 25 Ephemeris with key 22895 differs from previously received
+416420.5,BDS B1 25 Ephemeris with key 22895 differs from previously received
+416420.6,BDS B1 8 Ephemeris with key 22895 differs from previously received
+416420.7,BDS B1 14 Ephemeris with key 22895 differs from previously received
+416420.7,BDS B1 24 Ephemeris with key 22895 differs from previously received
+416420.7,BDS B1 26 Ephemeris with key 22895 differs from previously received
+416420.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416421,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416421,BDS B1 14 Ephemeris with key 22895 differs from previously received
+416421,BDS B1 24 Ephemeris with key 22895 differs from previously received
+416421,BDS B1 25 Ephemeris with key 22895 differs from previously received
+416421,BDS B1 26 Ephemeris with key 22895 differs from previously received
+416421,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+416421.3,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+416422.3,BDS B1 8 Ephemeris with key 22895 differs from previously received
+416423.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416424,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416648.4,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416649,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416649.5,"(base_position_handler.cc:180) Epoch: 416649.00, changed surveyed base station position by 535.142m."
+416649.5,"(base_position_handler.cc:180) Epoch: 416649.00, changed surveyed base station position by 535.142m."
+416650.5,"(base_position_handler.cc:180) Epoch: 416650.00, changed surveyed base station position by 535.142m."
+416663.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416664,GAL E1B 8 Ephemeris with key 51 differs from previously received
+416822,BDS B1 24 Ephemeris with key 22895 differs from previously received
+416822.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+416867.9,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+416868,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+416882.1,BDS B1 14 Ephemeris with key 22895 differs from previously received
+416882.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+417034,"New obs time {wn = 2142, tow = 417033.998000} and last update time {wn = 2142, tow = 416913.997000} difference exceeds threshold of 120 seconds, reinitializing filter"
+417065.6,GAL E1B 8 Ephemeris with key 51 differs from previously received
+417065.6,BDS B1 14 Ephemeris with key 22895 differs from previously received
+417065.7,BDS B1 24 Ephemeris with key 22895 differs from previously received
+417065.7,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+417065.8,GAL E1B 8 Ephemeris with key 51 differs from previously received
+417066,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+417066,BDS B1 14 Ephemeris with key 22895 differs from previously received
+417066,BDS B1 24 Ephemeris with key 22895 differs from previously received
+417066.8,"New obs time {wn = 2142, tow = 417065.998000} and last update time {wn = 2142, tow = 416883.997000} difference exceeds threshold of 120 seconds, reinitializing filter"
+417066.8,"(base_position_handler.cc:180) Epoch: 417066.00, changed surveyed base station position by 4517.038m."
+417066.8,"New obs time {wn = 2142, tow = 417065.998000} and last update time {wn = 2142, tow = 416883.997000} difference exceeds threshold of 120 seconds, reinitializing ambiguity manager"
+417066.8,"(base_position_handler.cc:180) Epoch: 417066.00, changed surveyed base station position by 4517.038m."
+417067.7,"(base_position_handler.cc:180) Epoch: 417067.00, changed surveyed base station position by 4517.038m."
+417212.1,BDS B1 14 Ephemeris with key 22895 differs from previously received
+417212.3,BDS B1 14 Ephemeris with key 22895 differs from previously received
+417235.8,GAL E1B 8 Ephemeris with key 54 differs from previously received
+417332.1,BDS B1 24 Ephemeris with key 22895 differs from previously received
+417332.3,BDS B1 24 Ephemeris with key 22895 differs from previously received
+417467.8,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+417468,GPS L1CA 30 Ephemeris with key 30 differs from previously received
+417620.4,BDS B1 24 Ephemeris with key 22895 differs from previously received
+417620.7,BDS B1 14 Ephemeris with key 22895 differs from previously received
+417620.7,GAL E1B 8 Ephemeris with key 54 differs from previously received
+417621,GAL E1B 8 Ephemeris with key 54 differs from previously received
+417621,BDS B1 14 Ephemeris with key 22895 differs from previously received
+417621,BDS B1 24 Ephemeris with key 22895 differs from previously received
+417635.8,GAL E1B 8 Ephemeris with key 54 differs from previously received
+417636,GAL E1B 8 Ephemeris with key 54 differs from previously received
+417690.4,GAL E1B 8 Ephemeris with key 55 differs from previously received
+417691,GAL E1B 8 Ephemeris with key 55 differs from previously received
+417692.1,BDS B1 24 Ephemeris with key 24100 differs from previously received
+417692.3,BDS B1 24 Ephemeris with key 24100 differs from previously received
+417715.8,GAL E1B 8 Ephemeris with key 55 differs from previously received
+417716,GAL E1B 8 Ephemeris with key 55 differs from previously received
+417722.1,BDS B1 14 Ephemeris with key 24100 differs from previously received
+417722.3,BDS B1 14 Ephemeris with key 24100 differs from previously received
+417752.1,BDS B1 8 Ephemeris with key 24100 differs from previously received
+417752.3,BDS B1 8 Ephemeris with key 24100 differs from previously received
+417936.3,(robust_estimator.cc:414) MDE failure: possible position error too large.
+417937.3,(robust_estimator.cc:414) MDE failure: possible position error too large.
+417938.1,Velocity suppressed due to update delta time of 2.00 s exceeding allowable update delta time of 1.00 s
+417951.3,(robust_estimator.cc:414) MDE failure: possible position error too large.
+417952,Velocity suppressed due to update delta time of 3.00 s exceeding allowable update delta time of 1.00 s
+417992.1,BDS B1 25 Ephemeris with key 24100 differs from previously received
+417992.3,BDS B1 25 Ephemeris with key 24100 differs from previously received
+418022.1,BDS B1 26 Ephemeris with key 24100 differs from previously received
+418022.3,BDS B1 26 Ephemeris with key 24100 differs from previously received
+418220.2,BDS B1 8 Ephemeris with key 24100 differs from previously received
+418220.2,BDS B1 14 Ephemeris with key 24100 differs from previously received
+418220.2,BDS B1 8 Ephemeris with key 24100 differs from previously received
+418220.2,BDS B1 14 Ephemeris with key 24100 differs from previously received
+418220.4,BDS B1 24 Ephemeris with key 24100 differs from previously received
+418220.4,BDS B1 25 Ephemeris with key 24100 differs from previously received
+418220.4,BDS B1 26 Ephemeris with key 24100 differs from previously received
+418220.4,GAL E1B 8 Ephemeris with key 55 differs from previously received
+418221,GAL E1B 8 Ephemeris with key 55 differs from previously received
+418221,BDS B1 24 Ephemeris with key 24100 differs from previously received
+418221,BDS B1 25 Ephemeris with key 24100 differs from previously received
+418221,BDS B1 26 Ephemeris with key 24100 differs from previously received
+418227.9,GAL E1B 8 Ephemeris with key 55 differs from previously received
+418228,GAL E1B 8 Ephemeris with key 55 differs from previously received
+418232,BDS B1 14 Ephemeris with key 24100 differs from previously received
+418232,BDS B1 25 Ephemeris with key 24100 differs from previously received
+418232.3,BDS B1 14 Ephemeris with key 24100 differs from previously received
+418232.3,BDS B1 25 Ephemeris with key 24100 differs from previously received
+418262.1,BDS B1 24 Ephemeris with key 24100 differs from previously received
+418262.3,BDS B1 24 Ephemeris with key 24100 differs from previously received
+418267.1,[418266.629492] Dropped data from GNSS buffer! Relative latency to IMU too large or insufficient buffer capacity.
+418291.1,GAL E1B 8 Ephemeris with key 56 differs from previously received
+418291.3,GAL E1B 8 Ephemeris with key 56 differs from previously received
+418317.8,GAL E1B 8 Ephemeris with key 56 differs from previously received
+418318,GAL E1B 8 Ephemeris with key 56 differs from previously received
+418352.1,BDS B1 26 Ephemeris with key 24100 differs from previously received
+418352.3,BDS B1 26 Ephemeris with key 24100 differs from previously received

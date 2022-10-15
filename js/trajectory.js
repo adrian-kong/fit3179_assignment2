@@ -15,14 +15,14 @@ L.tileLayer(layerURL, {
 
 L.control.condensedAttribution(attribution).addTo(map);
 
-const color = ["#000", "#00B300", "#53b400", "#79b400", "#99b300", "#b5b100", "#d0ae00", "#e8aa00", "#ffa600", "#fff"]
+const color = ["#00B300", "#53b400", "#79b400", "#99b300", "#b5b100", "#d0ae00", "#fff"]
 
 let legend = L.control({position: 'topright'});
 legend.onAdd = () => {
     const div = L.DomUtil.create('div', 'pmodes'),
         labels = ['<strong style="font-size: 16px; line-height: 36px">GNSS Modes</strong>'],
-        categories = ['None', 'Single Point', 'Differential GNSS', 'Floated RTK', 'Fixed RTK', 'Dead Reckoning'
-            , 'SBAS', 'Manual', 'Simulator', 'Unknown'];
+        categories = ['Single Point', 'Differential GNSS', 'Floated RTK', 'Fixed RTK', 'Dead Reckoning'
+            , 'SBAS', 'Unknown'];
 
     for (let i = 0; i < categories.length; i++) {
         const html = '<i class="circle" style="background:' + color[i] + '"></i> ' +
@@ -34,12 +34,25 @@ legend.onAdd = () => {
 };
 legend.addTo(map);
 
+let min_tow = -1;
+let max_tow = -1;
 
 const complete = (start_tow, end_tow) => (result) => {
+    clearPath()
+
     let latlngs = [], slng = [], lastPosMode = -1;
     for (let i = 1; i < result.data.length; i++) {
         // TODO: trim data, null parsing / douglas peucker algorithm to simplify trajectory
         const datum = result.data[i], tow = datum[1], lat = datum[9], lon = datum[10];
+        if (tow) {
+            if (min_tow === -1) {
+                min_tow = tow
+            }
+            if (tow > max_tow) {
+                max_tow = tow
+            }
+        }
+
         if (tow && lat && lon) {
             const latlng = new L.LatLng(lat, lon);
             if (start_tow && tow < start_tow) continue
@@ -50,11 +63,12 @@ const complete = (start_tow, end_tow) => (result) => {
                 const pmode = parseInt(datum[2]);
 
                 if (pmode !== lastPosMode) {
+                    const colour = lastPosMode === 0 || lastPosMode > color.length ? "#fff" : color[lastPosMode - 1]
                     lastPosMode = pmode;
                     const path = L.polyline(slng, {
                         dashArray: "20,5",
                         dashSpeed: -10,
-                        color: color[lastPosMode]
+                        color: colour
                     });
                     map.addLayer(path);
 
@@ -103,7 +117,6 @@ function clearPath() {
 }
 
 function addPath(uri, start_tow, end_tow) {
-    clearPath();
     Papa.parse(uri, {
         download: true,
         complete: complete(start_tow, end_tow)
@@ -116,45 +129,42 @@ addPath(DRIVE_PATH)
 
 const CUSTOM_TOW_EVENT = "brushEvent";
 
-vegaEmbed('#drive', "vg/drive_stats.vg.json", {
-    patch: (spec) => {
-        spec.signals.push({
-            "name": "barClick",
-            "value": 0,
-            "on": [{"events": "mouseup", "update": "barClick + 1"}]
-        })
-        return spec;
+const updateTrajectory = (tow) => {
+    document.dispatchEvent(new CustomEvent(CUSTOM_TOW_EVENT, {detail: tow}));
+    try {
+        // console.log(tow)
+        addPath(DRIVE_PATH, tow[0], tow[1])
+    } catch (e) {
+        console.log("unable to find range... reverting to unbounded")
+        addPath(DRIVE_PATH)
     }
-}).then(result => {
-    result.view.addSignalListener('barClick', () => {
-        const tow = result.view.data('brush_store');
-        document.dispatchEvent(new CustomEvent(CUSTOM_TOW_EVENT, {detail: tow}));
-        try {
-            const range = tow[0].values[0]
-            addPath(DRIVE_PATH, range[0], range[1])
-        } catch (e) {
-            console.log("unable to find range... reverting to unbounded")
-            addPath(DRIVE_PATH)
-        }
-    })
-}).catch(console.error);
-
-
-const hookBrushEvent = (vl) => {
-    document.addEventListener(CUSTOM_TOW_EVENT, (e) => {
-        try {
-            vl.view.signal("start_tow", e.detail[0].values[0][0])
-            vl.view.signal("end_tow", e.detail[0].values[0][1]).runAsync()
-        } catch (e) {
-            console.log("unable to find range... reverting to unbounded")
-            vl.view.signal("start_tow", null);
-            vl.view.signal("end_tow", null).runAsync();
-        }
-    })
 }
 
-vegaEmbed('#cdf_2d', "vg/2d_cdf.vg.json").then(hookBrushEvent).catch(console.error);
-vegaEmbed('#cdf_3d', "vg/3d_cdf.vg.json").then(hookBrushEvent).catch(console.error);
+const tow_brush = (chart) => chart.view.addSignalListener('brush', (a, brush) => updateTrajectory(brush["GPS TOW \\[s\\]"]))
+
+vegaEmbed('#drive', "vg/drive_stats.vg.json").then(tow_brush).catch(console.error);
+
+
+const hookBrushEvent = (start_id, end_id) => (vl) => document.addEventListener(CUSTOM_TOW_EVENT, (e) => {
+    try {
+        vl.view.signal(start_id, e.detail[0])
+        vl.view.signal(end_id, e.detail[1]).runAsync()
+    } catch (e) {
+        console.log("unable to find range... reverting to unbounded")
+        try {
+            vl.view.signal(start_id, null);
+            vl.view.signal(end_id, null).runAsync();
+        } catch (e) {
+            console.log("no signal fields")
+        }
+    }
+})
+
+const hookVega = hookBrushEvent("start_tow", "end_tow")
+
+vegaEmbed('#altitude', 'vg/altitude.vg.json').then(tow_brush).catch(console.error);
+vegaEmbed('#cdf_2d', "vg/2d_cdf.vg.json").then(hookVega).catch(console.error);
+vegaEmbed('#cdf_3d', "vg/3d_cdf.vg.json").then(hookVega).catch(console.error);
 // vegaEmbed('#charts', "vg/charts.vg.json").then().catch(console.error);
-vegaEmbed('#density', "vg/movement_density.vg.json").then(hookBrushEvent).catch(console.error);
+vegaEmbed('#density', "vg/movement_density.vg.json").then(hookVega).catch(console.error);
 // vegaEmbed('#logs', "vg/logs.vg.json").then().catch(console.error);

@@ -3,12 +3,25 @@
   "data": {
     "url": "data/drive.csv"
   },
+  "transform": [
+    {
+      "calculate": "datum['Horiz Vel \\[m/s\\]']",
+      "as": "Velocity (m/s)"
+    },
+    {
+      "calculate": "datum['SVs Used']",
+      "as": "Satellites"
+    },
+    {
+      "calculate": "datum['Corr\\. Age \\[s\\]']",
+      "as": "Age (s)"
+    }
+  ],
   "repeat": {
     "row": [
-      "Alt Ellips \\[m\\]",
-      "Horiz Vel \\[m/s\\]",
-      "SVs Used",
-      "Corr\\. Age \\[s\\]"
+      "Velocity (m/s)",
+      "Age (s)",
+      "Satellites"
     ]
   },
   "config": {
@@ -18,7 +31,7 @@
     "background": null
   },
   "spec": {
-    "height": 140,
+    "height": 100,
     "width": 500,
     "layer": [
       {
@@ -38,6 +51,19 @@
           "tooltip": true
         },
         "encoding": {
+          "tooltip": [
+            {
+              "title": "GPS Time (seconds)",
+              "field": "GPS TOW \\[s\\]",
+              "type": "quantitative"
+            },
+            {
+              "field": {
+                "repeat": "row"
+              },
+              "type": "quantitative"
+            }
+          ],
           "x": {
             "scale": {
               "zero": false
@@ -52,7 +78,9 @@
             },
             "type": "quantitative"
           },
-          "color": {"value": "#ddd"}
+          "color": {
+            "value": "#ddd"
+          }
         }
       },
       {
@@ -69,12 +97,15 @@
             "scale": {
               "zero": false
             },
-            "title": "GPS Time of week [seconds]",
             "field": "GPS TOW \\[s\\]",
             "type": "quantitative",
             "axis": {
-              "grid": false
-            }
+              "grid": false,
+              "domain": false,
+              "ticks": false,
+              "labels": false
+            },
+            "title": null
           },
           "y": {
             "field": {
@@ -82,8 +113,15 @@
             },
             "type": "quantitative",
             "axis": {
-              "grid": false
+              "grid": false,
+              "domain": false,
+              "ticks": false,
+              "labelFontSize": 14,
+              "titleFontSize": 16
             }
+          },
+          "color": {
+            "value": "#2b2b2b"
           }
         }
       }

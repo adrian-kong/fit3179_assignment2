@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=1920, initial-scale=1" />
+    <meta name="viewport" content="width=1920, initial-scale=1"/>
 
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -41,52 +41,126 @@
     <div class="section1">
         <div id="map"></div>
         <div id="drivecont">
-            <div id="drive"></div>
+            <h1>Sensors over time visualized</h1>
+            <p id="interact_msg">[ <em>Drag charts below to interact</em> ]</p>
+            <div id="sensor_box">
+                <div class="drivebox">
+                    <div id="drive"></div>
+                    <div class="drivet">
+                        <div class="drivetext">On ground velocity of vehicle</div>
+                        <div class="drivetext">Correction age to reach RTK receiver. Lower is better</div>
+                        <div class="drivetext">Space Vehicles used to track position. Lower means no signal</div>
+                    </div>
+
+                </div>
+                <div class="drivebox">
+
+                    <div id="altitude"></div>
+                    <div class="drivet">
+                        <div class="alt_text">Altitude of position using WGS84 coordinate</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="text1">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at gravida mi. Aenean nec imperdiet erat.
-            Quisque sed magna vestibulum, faucibus elit ultrices, tempor risus. Phasellus viverra quis urna ac
-            fringilla. Sed sit amet tortor scelerisque, sollicitudin tellus ac, mattis dolor. Nam nisl enim, tristique
-            ac imperdiet vel, dignissim eget risus. Nullam magna orci, blandit non tincidunt at, porta dignissim nisi.
-            Aliquam a velit erat. Nunc quis nibh ultrices, blandit nunc id, ultricies sem. Nullam sed nulla ex. Vivamus
-            faucibus, enim id ornare lacinia, justo urna varius mi, in viverra felis tellus nec sem.
-        </p>
+
+        <div class="tile">
+            <div id="sp">
+                <div class="tile_title">
+                    Single Point
+                </div>
+                <div class="tile_content">
+                    uses receiver both statically and dynamically
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div id="dg">
+                <div class="tile_title">
+                    Differential GNSS
+                </div>
+                <div class="tile_content">
+                    uses positional corrections too eliminate errors
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div id="flrtk">
+                <div class="tile_title">
+                    Floated RTK
+                </div>
+                <div class="tile_content">
+                    uses statistical methods, has not produced an acceptable fix solution yet
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div id="firtk">
+                <div class="tile_title">
+                    Fixed RTK
+                </div>
+                <div class="tile_content">
+                    uses statistical methods, produced an acceptable fixed solution
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div id="dr">
+                <div class="tile_title">
+                    Dead Reckoning
+                </div>
+                <div class="tile_content">
+                    uses last position to extrapolate current based on acceleration
+                </div>
+            </div>
+        </div>
+        <div class="tile">
+            <div id="sbas">
+                <div class="tile_title">
+                    SBAS
+                </div>
+                <div class="tile_content">
+                    uses regional network of ground and satellite system
+                </div>
+            </div>
+        </div>
     </div>
     <div class="section2">
         <div class="section2content">
             <div id="density"></div>
-            <br>
-            <div id="cdfs">
-                <div id="cdf_2d"></div>
-                <div id="cdf_3d"></div>
-            </div>
         </div>
         <div class="text2">
             <h1>
-                Lorem ipsum
+                Vector Density
             </h1>
             <p>
-                Quisque tincidunt ullamcorper est, sed tempor felis interdum in. Aenean nec felis ac lacus suscipit
-                imperdiet et sed tortor. Nulla posuere nisl vitae neque cursus, sed pellentesque elit malesuada. Sed in
-                velit egestas, bibendum nunc at, ullamcorper nisi. Aliquam egestas, erat nec malesuada luctus, urna
-                justo tincidunt eros, in vehicula dui sem sed tellus. Integer mi eros, gravida id ligula eget, porttitor
-                auctor massa. Sed a nibh a mi condimentum pulvinar ut a ex. Integer lacinia elementum odio ut lobortis.
-                Nulla mollis dui leo, in auctor mi tincidunt sit amet. Nulla facilisi. Donec felis mauris, sodales eu
-                gravida ut, consequat sed massa. Nam at diam vitae mauris bibendum convallis. Vivamus dignissim leo dui,
-                luctus efficitur orci blandit sed. Nunc luctus volutpat euismod. Nulla eget sem nec nulla tempus
-                molestie.
+                A two dimensional density plot of most frequent motion vectors during drive. Representation of which
+                direction and magnitude given by speed on ground and course on ground (COG) transformed onto cartesian
+                plane. Brightest point represent most occured vector
             </p>
-            <p>
-                Nunc sed diam id mauris convallis egestas eget ut neque. Duis ac venenatis risus, eu cursus elit. Nulla
-            facilisi. Duis aliquet porttitor velit, fermentum molestie lectus tempus et. In eleifend consequat mauris,
-            cursus tincidunt mi vulputate id. Pellentesque quis est enim. Vivamus sit amet leo vitae libero venenatis
-            aliquam at vel augue. Pellentesque eget nunc malesuada, dictum ex id, ornare erat. Pellentesque laoreet
-            varius pretium. Pellentesque at dictum felis. Sed velit metus, fermentum nec nibh quis, porttitor ultricies
-            eros. Donec venenatis sapien in luctus tristique. Praesent pretium vel elit eget bibendum. Proin porttitor
-            laoreet congue. In fermentum sapien id lacus luctus sollicitudin.
-            </p>
+        </div>
+    </div>
+    <div id="cdfs">
+        <div id="cdfcont">
+
+            <div id="cdf_text">
+                <h1>
+                    Cumulative Density of Position Error
+                </h1>
+                <p>
+                    Percentile of position in meters error, 2D position error only accounts for latitude and longitude
+                    whereas 3D accounts for also height and is done by taking the magnitude of the error vectors.
+                    This is especially useful to give measurable bound on how often errors occur and how large the error
+                    is.
+                </p>
+
+            </div>
+
+            <div id="cdf_box">
+                <div id="cdf_2d"></div>
+                <div id="cdf_3d"></div>
+            </div>
         </div>
     </div>
 </div>

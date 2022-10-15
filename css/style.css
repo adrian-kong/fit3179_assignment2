@@ -33,12 +33,61 @@ body {
 
 .text1 {
     width: 1920px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    margin: 64px auto 64px auto;
+}
+
+#sp {
+    background-color: #00B300;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 20%) 0 22px 70px 4px;
+    padding: 24px;
+
+}
+
+#dg {
+    background-color: #53b400;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 20%) 0 22px 70px 4px;
+    padding: 24px;
+
+
+}
+
+#flrtk {
+    background-color: #79b400;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 20%) 0 22px 70px 4px;
+
+    padding: 24px;
+
+}
+
+#firtk {
+    background-color: #99b300;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 20%) 0 22px 70px 4px;
+    padding: 24px;
+
+}
+
+#dr {
+    background-color: #b5b100;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 20%) 0 22px 70px 4px;
+    padding: 24px;
+
+}
+
+#sbas {
+    background-color: #d0ae00;
+    border-radius: 12px;
+    box-shadow: rgb(0 0 0 / 20%) 0 22px 70px 4px;
+    padding: 24px;
+
 }
 
 .text1 p {
-    margin: 128px 64px 108px 64px;
     text-align: center;
 
 }
@@ -66,23 +115,63 @@ body {
 }
 
 #cdfs {
-    margin-top: 48px;
+    margin-top: 72px;
+    justify-content: center;
+    display: flex;
 }
 
+#cdf_text {
+    width: 800px;
+}
+
+#cdf_text h1{
+    font-size: 48px;
+}
+#cdf_text p{
+    font-size: 28px;
+    margin-left: 72px;
+    margin-right: 72px;
+}
+
+#cdfcont{
+    width: 1920px;
+    box-shadow: rgb(0 0 0 / 56%) 0 22px 70px 4px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#cdf_2d {
+    padding: 36px;
+}
+
+#cdf_3d {
+    padding: 36px;
+}
 .text2 {
-    margin: 20px 240px 20px 120px;
+    margin: 0 240px 20px 100px;
+    width: 1600px;
 }
 
 .text2 h1 {
-    font-size: 48px;
+    font-size: 72px;
 }
 
 .text2 p {
-    font-size: 20px;
+    font-size: 32px;
 }
 
 #content {
     margin: 64px;
+}
+
+#cdf_box {
+    width: 600px;
+    padding-left: 100px;
+    padding-top: 36px;
+    padding-bottom: 36px;
 }
 
 #header p {
@@ -106,8 +195,84 @@ body {
     border-radius: 12px;
 }
 
+#drivecont h1 {
+    margin-top: 36px;
+    margin-bottom: 0;
+}
+
+#sensor_box {
+    width: auto;
+}
+
 #drive {
-    padding: 56px 72px 56px 48px;
+    padding: 0 36px 0 72px;
+}
+
+.drivet {
+
+}
+
+.tile_content {
+    font-size: 20px;
+    font-weight: normal;
+    height: 80px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+.tile_title {
+    padding-bottom: 24px;
+    font-size: 24px;
+}
+
+.alt_text {
+    height: 200px;
+    padding-right: 48px;
+    padding-left: 0;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    inline-size: 150px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.tile {
+    width: 16.666%;
+    color: white;
+    margin: 16px;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.drivetext {
+    height: 34%;
+    padding-right: 48px;
+    padding-left: 0;
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    align-items: center;
+    inline-size: 150px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+#interact_msg {
+    font-size: 16px;
+}
+
+#altitude {
+    padding: 0 36px 48px 72px;
+    width: 658px;
+}
+
+.drivebox {
+    display: flex;
 }
 
 #header span {
@@ -147,7 +312,7 @@ body {
     border-radius: 10px;
     padding: 12px 24px 16px 24px;
     text-align: left;
-    opacity: 0.3;
+    opacity: 0.5;
     transition: opacity .2s ease-out;
     -moz-transition: opacity .2s ease-out;
     -webkit-transition: opacity .2s ease-out;
